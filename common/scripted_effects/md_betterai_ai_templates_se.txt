@@ -1,0 +1,193 @@
+md_betterai_get_division_templates = {
+	md_betterai_get_garrison_role_templates = yes
+	md_betterai_get_infantry_role_templates = yes
+	md_betterai_get_motorized_role_templates = yes
+}
+
+# <2 factories: 18W militia
+# <5 factories: 36W militia
+# <9 factories: 36W militia + artillery
+# <15 factories: 36W militia + artillery + support
+# else: 36W infantry + artillery + support
+md_betterai_get_garrison_role_templates = {
+	division_template = {
+		name = "Militia Battalion"
+		priority = 0
+		regiments = {
+			Militia_Bat = { x = 0 y = 0 }
+			Militia_Bat = { x = 0 y = 1 }
+			Militia_Bat = { x = 0 y = 2 }
+			Militia_Bat = { x = 1 y = 0 }
+			Militia_Bat = { x = 1 y = 1 }
+			Militia_Bat = { x = 1 y = 2 }
+		}
+	}
+	division_template = {
+		name = "Militia Brigade"
+		priority = 0
+		regiments = {
+			Militia_Bat = { x = 0 y = 0 }
+			Militia_Bat = { x = 0 y = 1 }
+			Militia_Bat = { x = 0 y = 2 }
+			Militia_Bat = { x = 0 y = 3 }
+			Militia_Bat = { x = 1 y = 0 }
+			Militia_Bat = { x = 1 y = 1 }
+			Militia_Bat = { x = 1 y = 2 }
+			Militia_Bat = { x = 1 y = 3 }
+			Militia_Bat = { x = 2 y = 0 }
+			Militia_Bat = { x = 2 y = 1 }
+			Militia_Bat = { x = 2 y = 2 }
+			Militia_Bat = { x = 2 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Military Police Brigade A"
+		priority = 0
+		regiments = {
+			Militia_Bat = { x = 0 y = 0 }
+			Militia_Bat = { x = 0 y = 1 }
+			Militia_Bat = { x = 0 y = 2 }
+			Militia_Bat = { x = 0 y = 3 }
+			Militia_Bat = { x = 1 y = 0 }
+			Militia_Bat = { x = 1 y = 1 }
+			Militia_Bat = { x = 1 y = 2 }
+			Militia_Bat = { x = 1 y = 3 }
+			Militia_Bat = { x = 2 y = 0 }
+			Arty_Bat = { x = 2 y = 1 }
+			Arty_Bat = { x = 2 y = 2 }
+			Arty_Bat = { x = 2 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Military Police Brigade B"
+		priority = 0
+		regiments = {
+			Militia_Bat = { x = 0 y = 0 }
+			Militia_Bat = { x = 0 y = 1 }
+			Militia_Bat = { x = 0 y = 2 }
+			Militia_Bat = { x = 0 y = 3 }
+			Militia_Bat = { x = 1 y = 0 }
+			Militia_Bat = { x = 1 y = 1 }
+			Militia_Bat = { x = 1 y = 2 }
+			Militia_Bat = { x = 1 y = 3 }
+			Arty_Bat = { x = 2 y = 0 }
+			Arty_Bat = { x = 2 y = 1 }
+			Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+			combat_service_support_company = { x = 0 y = 2 }
+		}
+	}
+	division_template = {
+		name = "Military Police Brigade C"
+		priority = 1
+		regiments = {
+			L_Inf_Bat = { x = 0 y = 0 }
+			L_Inf_Bat = { x = 0 y = 1 }
+			L_Inf_Bat = { x = 0 y = 2 }
+			L_Inf_Bat = { x = 0 y = 3 }
+			L_Inf_Bat = { x = 1 y = 0 }
+			L_Inf_Bat = { x = 1 y = 1 }
+			L_Inf_Bat = { x = 1 y = 2 }
+			L_Inf_Bat = { x = 1 y = 3 }
+			Arty_Bat = { x = 2 y = 0 }
+			Arty_Bat = { x = 2 y = 1 }
+			Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+			combat_service_support_company = { x = 0 y = 2 }
+		}
+	}
+}
+
+# <5 factories: 18W infantry
+# <9 factories: 36W infantry + artillery
+# <15 factories / no fuel: 36W infantry + artillery + support
+# else: 36W infantry + SP artillery + support
+md_betterai_get_infantry_role_templates = {
+	division_template = {
+		name = "Infantry Battalion"
+		priority = 1
+		regiments = {
+			L_Inf_Bat = { x = 0 y = 0 }
+			L_Inf_Bat = { x = 0 y = 1 }
+			L_Inf_Bat = { x = 0 y = 2 }
+			L_Inf_Bat = { x = 1 y = 0 }
+			L_Inf_Bat = { x = 1 y = 1 }
+			L_Inf_Bat = { x = 1 y = 2 }
+		}
+	}
+	division_template = {
+		name = "Infantry Brigade A"
+		priority = 1
+		regiments = {
+			L_Inf_Bat = { x = 0 y = 0 }
+			L_Inf_Bat = { x = 0 y = 1 }
+			L_Inf_Bat = { x = 0 y = 2 }
+			L_Inf_Bat = { x = 0 y = 3 }
+			L_Inf_Bat = { x = 1 y = 0 }
+			L_Inf_Bat = { x = 1 y = 1 }
+			L_Inf_Bat = { x = 1 y = 2 }
+			L_Inf_Bat = { x = 1 y = 3 }
+			L_Inf_Bat = { x = 2 y = 0 }
+			Arty_Bat = { x = 2 y = 1 }
+			Arty_Bat = { x = 2 y = 2 }
+			Arty_Bat = { x = 2 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Infantry Brigade B"
+		priority = 1
+		regiments = {
+			L_Inf_Bat = { x = 0 y = 0 }
+			L_Inf_Bat = { x = 0 y = 1 }
+			L_Inf_Bat = { x = 0 y = 2 }
+			L_Inf_Bat = { x = 0 y = 3 }
+			L_Inf_Bat = { x = 1 y = 0 }
+			L_Inf_Bat = { x = 1 y = 1 }
+			L_Inf_Bat = { x = 1 y = 2 }
+			L_Inf_Bat = { x = 1 y = 3 }
+			Arty_Bat = { x = 2 y = 0 }
+			Arty_Bat = { x = 2 y = 1 }
+			Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+			combat_service_support_company = { x = 0 y = 2 }
+		}
+	}
+	division_template = {
+		name = "Infantry Brigade C"
+		priority = 1
+		regiments = {
+			L_Inf_Bat = { x = 0 y = 0 }
+			L_Inf_Bat = { x = 0 y = 1 }
+			L_Inf_Bat = { x = 0 y = 2 }
+			L_Inf_Bat = { x = 0 y = 3 }
+			L_Inf_Bat = { x = 1 y = 0 }
+			L_Inf_Bat = { x = 1 y = 1 }
+			L_Inf_Bat = { x = 1 y = 2 }
+			L_Inf_Bat = { x = 1 y = 3 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+			SP_Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+		}
+	}
+}
+
+# <5 factories or dying: don't build
+# <9 factories: 18W motorized infantry + support
+# <15 factories: 36W motorized infantry + support
+# else: 36 motorized infantry + support + SP artillery
+md_betterai_get_motorized_role_templates = {
+
+}
