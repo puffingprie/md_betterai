@@ -190,9 +190,10 @@ generic_infantry_templates = {
 			support = {
 				L_Recce_Comp = 1
 				L_Engi_Comp = 1
+				medical_company = 1
 			}
 		}
-		allowed_types = { L_Inf_Bat SP_Arty_Battery L_Recce_Comp L_Engi_Comp }
+		allowed_types = { L_Inf_Bat SP_Arty_Battery L_Recce_Comp L_Engi_Comp medical_company }
 	}
 }
 
@@ -314,13 +315,13 @@ generic_mechanized_templates = {
 				SP_Arty_Bat = 2
 			}
 			support = {
-				Mech_Recce_Comp = 1
+				Mot_Recce_Comp = 1
 				H_Engi_Comp = 1
 				logistics_company = 1
 				medical_company = 1
 			}
 		}
-		allowed_types = { Mech_Inf_Bat SP_Arty_Bat Mech_Recce_Comp H_Engi_Comp logistics_company medical_company }
+		allowed_types = { Mech_Inf_Bat SP_Arty_Bat Mot_Recce_Comp H_Engi_Comp logistics_company medical_company }
 	}
 	mechanized_brigade_36w_C = {
 		enable = { has_country_flag = { flag = md_betterai_mechanized_role_template_type value = 3 } }
@@ -340,13 +341,13 @@ generic_mechanized_templates = {
 				SP_Arty_Bat = 2
 			}
 			support = {
-				Mech_Recce_Comp = 1
+				Mot_Recce_Comp = 1
 				H_Engi_Comp = 1
 				logistics_company = 1
 				medical_company = 1
 			}
 		}
-		allowed_types = { Mech_Inf_Bat armor_Bat SP_Arty_Bat Mech_Recce_Comp H_Engi_Comp logistics_company medical_company }
+		allowed_types = { Mech_Inf_Bat armor_Bat SP_Arty_Bat Mot_Recce_Comp H_Engi_Comp logistics_company medical_company }
 	}
 }
 
