@@ -192,7 +192,7 @@ generic_infantry_templates = {
 				L_Engi_Comp = 1
 			}
 		}
-		allowed_types = { L_Inf_Bat Arty_Bat L_Recce_Comp L_Engi_Comp }
+		allowed_types = { L_Inf_Bat SP_Arty_Battery L_Recce_Comp L_Engi_Comp }
 	}
 }
 
@@ -614,7 +614,7 @@ generic_mechanized_marines_templates = {
 				Armoured_Assault_Bridging_Comp = 1
 			}
 		}
-		allowed_types = { Arm_Marine_Bat SP_Arty_Bat armor_Bat Arm_Recce_Comp H_Engi_Comp helicopter_logistics_company medical_company Armoured_Assault_Bridging_Comp }
+		allowed_types = { Arm_Marine_Bat SP_Arty_Bat armor_Bat Arm_Recce_Comp H_Engi_Comp Armored_Engi_Comp helicopter_logistics_company medical_company Armoured_Assault_Bridging_Comp }
 	}
 }
 
