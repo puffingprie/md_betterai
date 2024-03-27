@@ -28,6 +28,7 @@ md_betterai_set_role_template_types = {
 	md_betterai_set_infantry_role_template_type = yes
 	md_betterai_set_motorized_role_template_type = yes
 	md_betterai_set_mechanized_role_template_type = yes
+	md_betterai_set_armored_infantry_role_template_type = yes
 	md_betterai_set_marines_role_template_type = yes
 	md_betterai_set_mechanized_marines_role_template_type = yes
 	md_betterai_set_air_assault_role_template_type = yes
@@ -70,67 +71,84 @@ md_betterai_set_motorized_role_template_type = {
 }
 
 # <20 factories or dying: don't build
-# <30 factories: 36W mechanized + SP artillery
 # <40 factories: 36W mechanized + SP artillery + support
-# else: 36W armored + SP artillery + support
+# <65 36W mechanized + SP artillery + support
+# else: 36W mechanized + 1 tank + SP artillery + support
 md_betterai_set_mechanized_role_template_type = {
 	if = { limit = { OR = { num_of_factories < 20 surrender_progress > 0.59 } } set_country_flag = { flag = md_betterai_mechanized_role_template_type value = 0 } }
-	else_if = { limit = { num_of_factories < 30 } set_country_flag = { flag = md_betterai_mechanized_role_template_type value = 1 } }
-	else_if = { limit = { num_of_factories < 40 } set_country_flag = { flag = md_betterai_mechanized_role_template_type value = 2 } }
+	else_if = { limit = { num_of_factories < 40 } set_country_flag = { flag = md_betterai_mechanized_role_template_type value = 1 } }
+	else_if = { limit = { num_of_factories < 65 } set_country_flag = { flag = md_betterai_mechanized_role_template_type value = 2 } }
 	else = { set_country_flag = { flag = md_betterai_mechanized_role_template_type value = 3 } }
+}
+
+# <30 factories or dying: don't build
+# <50 factories: 36W armored infantry + SP artillery + support
+# <75 36W armored infantry + SP artillery + support
+# else: 36W armored infantry + 1 tank + SP artillery + support
+md_betterai_set_armored_infantry_role_template_type = {
+	if = { limit = { OR = { num_of_factories < 30 surrender_progress > 0.59 } } set_country_flag = { flag = md_betterai_armored_infantry_role_template_type value = 0 } }
+	else_if = { limit = { num_of_factories < 50 } set_country_flag = { flag = md_betterai_armored_infantry_role_template_type value = 1 } }
+	else_if = { limit = { num_of_factories < 75 } set_country_flag = { flag = md_betterai_armored_infantry_role_template_type value = 2 } }
+	else = { set_country_flag = { flag = md_betterai_armored_infantry_role_template_type value = 3 } }
 }
 
 # <10 factories or dying: don't build
 # <20 factories: 36W marines + artillery + support
 # <30 factories: 36W marines + SP artillery + support
-# else: 60W marines + SP artillery + 1 tank + support
+# <45 factories: 60W marines + SP artillery + 1 tank + support
+# else: 72W marines + SP artillery + 1 tank + support
 md_betterai_set_marines_role_template_type = {
 	if = { limit = { OR = { num_of_factories < 10 surrender_progress > 0.59 } } set_country_flag = { flag = md_betterai_marines_role_template_type value = 0 } }
 	else_if = { limit = { num_of_factories < 20 } set_country_flag = { flag = md_betterai_marines_role_template_type value = 1 } }
 	else_if = { limit = { num_of_factories < 30 } set_country_flag = { flag = md_betterai_marines_role_template_type value = 2 } }
-	else = { set_country_flag = { flag = md_betterai_marines_role_template_type value = 3 } }
+	else_if = { limit = { num_of_factories < 45 } set_country_flag = { flag = md_betterai_marines_role_template_type value = 3 } }
+	else = { set_country_flag = { flag = md_betterai_marines_role_template_type value = 4 } }
 }
 
 # <30 factories or dying: don't build
 # <45 factories: 36W armored marines + SP artillery + support
-# else: 60W armored marines + SP artillery + support
+# <75 factories: 60W armored marines + SP artillery + 1 tank + support
+# else: 72W armored marines + SP artillery + 1 tank + support
 md_betterai_set_mechanized_marines_role_template_type = {
 	if = { limit = { OR = { num_of_factories < 30 surrender_progress > 0.49 } } set_country_flag = { flag = md_betterai_mechanized_marines_role_template_type value = 0 } }
 	else_if = { limit = { num_of_factories < 45 } set_country_flag = { flag = md_betterai_mechanized_marines_role_template_type value = 1 } }
-	else = { set_country_flag = { flag = md_betterai_mechanized_marines_role_template_type value = 2 } }
+	else_if = { limit = { num_of_factories < 75 } set_country_flag = { flag = md_betterai_mechanized_marines_role_template_type value = 3 } }
+	else = { set_country_flag = { flag = md_betterai_mechanized_marines_role_template_type value = 3 } }
 }
 
 # <10 factories or dying: 36W special forces + artillery
 # <20 factories: 36W special forces + artillery + support
 # <30 factories: 36W special forces + SP artillery + support
-# else: 60W special forces + SP artillery + 1 tank + support
+# <60 factories: 60W special forces + SP artillery + 1 tank + support
+# else: 72W special forces + SP artillery + 1 tank + support
 md_betterai_set_special_forces_role_template_type = {
 	if = { limit = { OR = { num_of_factories < 10 surrender_progress > 0.74 } } set_country_flag = { flag = md_betterai_special_forces_role_template_type value = 1 } }
 	else_if = { limit = { num_of_factories < 20 } set_country_flag = { flag = md_betterai_special_forces_role_template_type value = 2 } }
 	else_if = { limit = { num_of_factories < 30 } set_country_flag = { flag = md_betterai_special_forces_role_template_type value = 3 } }
-	else = { set_country_flag = { flag = md_betterai_special_forces_role_template_type value = 4 } }
+	else_if = { limit = { num_of_factories < 60 } set_country_flag = { flag = md_betterai_special_forces_role_template_type value = 5 } }
+	else = { set_country_flag = { flag = md_betterai_special_forces_role_template_type value = 5 } }
+}
+
+# <40 factories or dying: don't build
+# <60 factories: 36W infantry + air assault + support
+# <100 factories: 36W infantry + air assault + 1 tank + support
+# else: 36W armored infantry + air assault + 1 tank + support
+md_betterai_set_air_assault_role_template_type = {
+	if = { limit = { OR = { num_of_factories < 40 surrender_progress > 0.49 } } set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 0 } }
+	else_if = { limit = { num_of_factories < 60 } set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 1 } }
+	else_if = { limit = { num_of_factories < 100 } set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 2 } }
+	else = { set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 3 } }
 }
 
 # <20 factories or dying: don't build
-# <35 factories: 36W infantry + air assault + support
-# <45 factories: 36W infantry + air assault + 1 tank + support
-# <60 factories: 36W mechanized infantry + air assault + 1 tank + support
-# else: 36W armored infantry + air assault + 1 tank + support
-md_betterai_set_air_assault_role_template_type = {
-	if = { limit = { OR = { num_of_factories < 20 surrender_progress > 0.49 } } set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 0 } }
-	else_if = { limit = { num_of_factories < 35 } set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 1 } }
-	else_if = { limit = { num_of_factories < 45 } set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 2 } }
-	else_if = { limit = { num_of_factories < 60 } set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 3 } }
-	else = { set_country_flag = { flag = md_betterai_air_assault_role_template_type value = 4 } }
-}
-
-# <30 factories or dying: don't build
 # <45 factories: 36W light tank + mbt + armored infantry + SP artillery + support
 # <60 factories: 36W mbt + armored infantry + SP artillery + support
-# else: 60W mbt + armored infantry + SP artillery + support
+# <100 factories: 60W mbt + armored infantry + SP artillery + support
+# else: 72W mbt + armored infantry + SP artillery + support
 md_betterai_set_armor_role_template_type = {
-	if = { limit = { OR = { num_of_factories < 30 surrender_progress > 0.49 } } set_country_flag = { flag = md_betterai_armor_role_template_type value = 0 } }
+	if = { limit = { OR = { num_of_factories < 20 surrender_progress > 0.49 } } set_country_flag = { flag = md_betterai_armor_role_template_type value = 0 } }
 	else_if = { limit = { num_of_factories < 45 } set_country_flag = { flag = md_betterai_armor_role_template_type value = 1 } }
 	else_if = { limit = { num_of_factories < 60 } set_country_flag = { flag = md_betterai_armor_role_template_type value = 2 } }
-	else = { set_country_flag = { flag = md_betterai_armor_role_template_type value = 3 } }
+	else_if = { limit = { num_of_factories < 100 } set_country_flag = { flag = md_betterai_armor_role_template_type value = 3 } }
+	else = { set_country_flag = { flag = md_betterai_armor_role_template_type value = 4 } }
 }

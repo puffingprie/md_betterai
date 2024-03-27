@@ -1,0 +1,15 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				md_betterai_get_division_templates = yes
+				md_betterai_set_role_template_types = yes
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			md_betterai_set_role_template_types = yes
+		}
+	}
+}

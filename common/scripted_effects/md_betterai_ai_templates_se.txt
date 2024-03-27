@@ -2,6 +2,13 @@ md_betterai_get_division_templates = {
 	md_betterai_get_garrison_role_templates = yes
 	md_betterai_get_infantry_role_templates = yes
 	md_betterai_get_motorized_role_templates = yes
+	md_betterai_get_mechanized_role_templates = yes
+	md_betterai_get_armored_infantry_role_templates = yes
+	md_betterai_get_marines_role_templates = yes
+	md_betterai_get_mechanized_marines_role_templates = yes
+	md_betterai_get_special_forces_role_template = yes
+	md_betterai_get_air_assault_role_templates = yes
+	md_betterai_get_armor_role_templates = yes
 }
 
 # <2 factories: 18W militia
@@ -189,5 +196,689 @@ md_betterai_get_infantry_role_templates = {
 # <15 factories: 36W motorized infantry + support
 # else: 36 motorized infantry + support + SP artillery
 md_betterai_get_motorized_role_templates = {
+	division_template = {
+		name = "Motorized Battalion"
+		priority = 1
+		regiments = {
+			Mot_Inf_Bat = { x = 0 y = 0 }
+			Mot_Inf_Bat = { x = 0 y = 1 }
+			Mot_Inf_Bat = { x = 1 y = 0 }
+			Mot_Inf_Bat = { x = 1 y = 1 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+		}
+	}
+	division_template = {
+		name = "Motorized Brigade A"
+		priority = 1
+		regiments = {
+			Mot_Inf_Bat = { x = 0 y = 0 }
+			Mot_Inf_Bat = { x = 0 y = 1 }
+			Mot_Inf_Bat = { x = 0 y = 2 }
+			Mot_Inf_Bat = { x = 0 y = 3 }
+			Mot_Inf_Bat = { x = 1 y = 0 }
+			Mot_Inf_Bat = { x = 1 y = 1 }
+			Mot_Inf_Bat = { x = 1 y = 2 }
+			Mot_Inf_Bat = { x = 1 y = 3 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+			combat_service_support_company = { x = 0 y = 2 }
+			Arty_Battery = { x = 0 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Motorized Brigade B"
+		priority = 1
+		regiments = {
+			Mot_Inf_Bat = { x = 0 y = 0 }
+			Mot_Inf_Bat = { x = 0 y = 1 }
+			Mot_Inf_Bat = { x = 0 y = 2 }
+			Mot_Inf_Bat = { x = 0 y = 3 }
+			Mot_Inf_Bat = { x = 1 y = 0 }
+			Mot_Inf_Bat = { x = 1 y = 1 }
+			Mot_Inf_Bat = { x = 1 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+		}
+	}
+}
 
+# <20 factories or dying: don't build
+# <40 factories: 36W mechanized + SP artillery + support
+# <65 36W mechanized + SP artillery + support
+# else: 36W mechanized + 1 tank + SP artillery + support
+md_betterai_get_mechanized_role_templates = {
+	division_template = {
+		name = "Mechanized Brigade A"
+		priority = 1
+		regiments = {
+			Mech_Inf_Bat = { x = 0 y = 0 }
+			Mech_Inf_Bat = { x = 0 y = 1 }
+			Mech_Inf_Bat = { x = 0 y = 2 }
+			Mech_Inf_Bat = { x = 0 y = 3 }
+			Mech_Inf_Bat = { x = 1 y = 0 }
+			Mech_Inf_Bat = { x = 1 y = 1 }
+			Mech_Inf_Bat = { x = 1 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+		}
+		support = {
+			H_Engi_Comp = { x = 0 y = 0 }
+		}
+	}
+	division_template = {
+		name = "Mechanized Brigade B"
+		priority = 1
+		regiments = {
+			Mech_Inf_Bat = { x = 0 y = 0 }
+			Mech_Inf_Bat = { x = 0 y = 1 }
+			Mech_Inf_Bat = { x = 0 y = 2 }
+			Mech_Inf_Bat = { x = 1 y = 0 }
+			Mech_Inf_Bat = { x = 1 y = 1 }
+			Mech_Inf_Bat = { x = 1 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+		}
+		support = {
+			Mech_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			medical_company = { x = 0 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Mechanized Brigade C"
+		priority = 1
+		regiments = {
+			Mech_Inf_Bat = { x = 0 y = 0 }
+			Mech_Inf_Bat = { x = 0 y = 1 }
+			Mech_Inf_Bat = { x = 0 y = 2 }
+			Mech_Inf_Bat = { x = 1 y = 0 }
+			Mech_Inf_Bat = { x = 1 y = 1 }
+			armor_Bat = { x = 1 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+		}
+		support = {
+			Mech_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			medical_company = { x = 0 y = 3 }
+		}
+	}
+}
+
+# <30 factories or dying: don't build
+# <50 factories: 36W armored infantry + SP artillery + support
+# <75 36W armored infantry + SP artillery + support
+# else: 36W armored infantry + 1 tank + SP artillery + support
+md_betterai_get_armored_infantry_role_templates = {
+	division_template = {
+		name = "Armored Brigade A"
+		priority = 1
+		regiments = {
+			Arm_Inf_Bat = { x = 0 y = 0 }
+			Arm_Inf_Bat = { x = 0 y = 1 }
+			Arm_Inf_Bat = { x = 0 y = 2 }
+			Arm_Inf_Bat = { x = 0 y = 3 }
+			Arm_Inf_Bat = { x = 1 y = 0 }
+			Arm_Inf_Bat = { x = 1 y = 1 }
+			Arm_Inf_Bat = { x = 1 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+		}
+		support = {
+			H_Engi_Comp = { x = 0 y = 0 }
+		}
+	}
+	division_template = {
+		name = "Armored Brigade B"
+		priority = 1
+		regiments = {
+			Arm_Inf_Bat = { x = 0 y = 0 }
+			Arm_Inf_Bat = { x = 0 y = 1 }
+			Arm_Inf_Bat = { x = 0 y = 2 }
+			Arm_Inf_Bat = { x = 1 y = 0 }
+			Arm_Inf_Bat = { x = 1 y = 1 }
+			Arm_Inf_Bat = { x = 1 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			Armored_Engi_Comp = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			medical_company = { x = 0 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Armored Brigade C"
+		priority = 1
+		regiments = {
+			Arm_Inf_Bat = { x = 0 y = 0 }
+			Arm_Inf_Bat = { x = 0 y = 1 }
+			Arm_Inf_Bat = { x = 0 y = 2 }
+			Arm_Inf_Bat = { x = 1 y = 0 }
+			Arm_Inf_Bat = { x = 1 y = 1 }
+			armor_Bat = { x = 1 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			Armored_Engi_Comp = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			medical_company = { x = 0 y = 3 }
+		}
+	}
+}
+
+# <10 factories or dying: don't build
+# <20 factories: 36W marines + artillery + support
+# <30 factories: 36W marines + SP artillery + support
+# <45 factories: 60W marines + SP artillery + 1 tank + support
+# else: 72W marines + SP artillery + 1 tank + support
+md_betterai_get_marines_role_templates = {
+	division_template = {
+		name = "Marine Brigade A"
+		priority = 2
+		regiments = {
+			L_Marine_Bat = { x = 0 y = 0 }
+			L_Marine_Bat = { x = 0 y = 1 }
+			L_Marine_Bat = { x = 0 y = 2 }
+			L_Marine_Bat = { x = 0 y = 3 }
+			L_Marine_Bat = { x = 1 y = 0 }
+			L_Marine_Bat = { x = 1 y = 1 }
+			L_Marine_Bat = { x = 1 y = 2 }
+			L_Marine_Bat = { x = 1 y = 3 }
+			Arty_Bat = { x = 2 y = 0 }
+			Arty_Bat = { x = 2 y = 1 }
+			Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+			AT_Inf_comp = { x = 0 y = 2 }
+		}
+	}
+	division_template = {
+		name = "Marine Brigade B"
+		priority = 2
+		regiments = {
+			L_Marine_Bat = { x = 0 y = 0 }
+			L_Marine_Bat = { x = 0 y = 1 }
+			L_Marine_Bat = { x = 0 y = 2 }
+			L_Marine_Bat = { x = 0 y = 3 }
+			L_Marine_Bat = { x = 1 y = 0 }
+			L_Marine_Bat = { x = 1 y = 1 }
+			L_Marine_Bat = { x = 1 y = 2 }
+			L_Marine_Bat = { x = 1 y = 3 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+			SP_Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+			AT_Inf_comp = { x = 0 y = 2 }
+		}
+	}
+	division_template = {
+		name = "Marine Division A"
+		priority = 2
+		regiments = {
+			L_Marine_Bat = { x = 0 y = 0 }
+			L_Marine_Bat = { x = 0 y = 1 }
+			L_Marine_Bat = { x = 0 y = 2 }
+			L_Marine_Bat = { x = 0 y = 3 }
+			L_Marine_Bat = { x = 0 y = 4 }
+			L_Marine_Bat = { x = 1 y = 0 }
+			L_Marine_Bat = { x = 1 y = 1 }
+			L_Marine_Bat = { x = 1 y = 2 }
+			L_Marine_Bat = { x = 1 y = 3 }
+			L_Marine_Bat = { x = 1 y = 4 }
+			L_Marine_Bat = { x = 2 y = 0 }
+			L_Marine_Bat = { x = 2 y = 1 }
+			L_Marine_Bat = { x = 2 y = 2 }
+			L_Marine_Bat = { x = 2 y = 3 }
+			SP_Arty_Bat = { x = 3 y = 0 }
+			SP_Arty_Bat = { x = 3 y = 1 }
+			SP_Arty_Bat = { x = 3 y = 2 }
+			armor_Bat = { x = 3 y = 3 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			medical_company = { x = 0 y = 2 }
+			logistics_company = { x = 0 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Marine Division B"
+		priority = 2
+		regiments = {
+			L_Marine_Bat = { x = 0 y = 0 }
+			L_Marine_Bat = { x = 0 y = 1 }
+			L_Marine_Bat = { x = 0 y = 2 }
+			L_Marine_Bat = { x = 0 y = 3 }
+			L_Marine_Bat = { x = 1 y = 0 }
+			L_Marine_Bat = { x = 1 y = 1 }
+			L_Marine_Bat = { x = 1 y = 2 }
+			L_Marine_Bat = { x = 1 y = 3 }
+			L_Marine_Bat = { x = 2 y = 0 }
+			L_Marine_Bat = { x = 2 y = 1 }
+			L_Marine_Bat = { x = 2 y = 2 }
+			L_Marine_Bat = { x = 2 y = 3 }
+			L_Marine_Bat = { x = 3 y = 0 }
+			L_Marine_Bat = { x = 3 y = 1 }
+			L_Marine_Bat = { x = 3 y = 2 }
+			L_Marine_Bat = { x = 3 y = 3 }
+			AA_Inf_Bat = { x = 3 y = 4 }
+			SP_Arty_Bat = { x = 4 y = 0 }
+			SP_Arty_Bat = { x = 4 y = 1 }
+			SP_Arty_Bat = { x = 4 y = 2 }
+			SP_Arty_Bat = { x = 4 y = 3 }
+			armor_Bat = { x = 4 y = 4 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			medical_company = { x = 0 y = 2 }
+			logistics_company = { x = 0 y = 3 }
+			Special_naval_assault_team_Comp = { x = 0 y = 4 }
+		}
+	}
+}
+
+# <30 factories or dying: don't build
+# <45 factories: 36W armored marines + SP artillery + support
+# <75 factories: 60W armored marines + SP artillery + 1 tank + support
+# else: 72W armored marines + SP artillery + 1 tank + support
+md_betterai_get_mechanized_marines_role_templates = {
+	division_template = {
+		name = "Armored Marine Brigade"
+		priority = 2
+		regiments = {
+			Arm_Marine_Bat = { x = 0 y = 0 }
+			Arm_Marine_Bat = { x = 0 y = 1 }
+			Arm_Marine_Bat = { x = 0 y = 2 }
+			Arm_Marine_Bat = { x = 1 y = 0 }
+			Arm_Marine_Bat = { x = 1 y = 1 }
+			Arm_Marine_Bat = { x = 1 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+		}
+		support = {
+			L_Engi_Comp = { x = 0 y = 0 }
+			Special_naval_assault_team_Comp = { x = 0 y = 1 }
+		}
+	}
+	division_template = {
+		name = "Armored Marine Division A"
+		priority = 2
+		regiments = {
+			Arm_Marine_Bat = { x = 0 y = 0 }
+			Arm_Marine_Bat = { x = 0 y = 1 }
+			Arm_Marine_Bat = { x = 0 y = 2 }
+			Arm_Marine_Bat = { x = 0 y = 3 }
+			Arm_Marine_Bat = { x = 1 y = 0 }
+			Arm_Marine_Bat = { x = 1 y = 1 }
+			Arm_Marine_Bat = { x = 1 y = 2 }
+			Arm_Marine_Bat = { x = 1 y = 3 }
+			Arm_Marine_Bat = { x = 2 y = 0 }
+			Arm_Marine_Bat = { x = 2 y = 1 }
+			Arm_Marine_Bat = { x = 2 y = 2 }
+			SP_Arty_Bat = { x = 3 y = 0 }
+			SP_Arty_Bat = { x = 3 y = 1 }
+			SP_Arty_Bat = { x = 3 y = 2 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			Armoured_Assault_Bridging_Comp = { x = 0 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Armored Marine Division B"
+		priority = 2
+		regiments = {
+			Arm_Marine_Bat = { x = 0 y = 0 }
+			Arm_Marine_Bat = { x = 0 y = 1 }
+			Arm_Marine_Bat = { x = 0 y = 2 }
+			Arm_Marine_Bat = { x = 0 y = 3 }
+			Arm_Marine_Bat = { x = 1 y = 0 }
+			Arm_Marine_Bat = { x = 1 y = 1 }
+			Arm_Marine_Bat = { x = 1 y = 2 }
+			Arm_Marine_Bat = { x = 1 y = 3 }
+			Arm_Marine_Bat = { x = 2 y = 0 }
+			Arm_Marine_Bat = { x = 2 y = 1 }
+			Arm_Marine_Bat = { x = 2 y = 2 }
+			Arm_Marine_Bat = { x = 2 y = 3 }
+			SP_Arty_Bat = { x = 3 y = 0 }
+			SP_Arty_Bat = { x = 3 y = 1 }
+			armor_Bat = { x = 3 y = 2 }
+			armor_Bat = { x = 3 y = 3 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			Armored_Engi_Comp = { x = 0 y = 2 }
+			helicopter_logistics_company = { x = 0 y = 3 }
+			medical_company = { x = 1 y = 0 }
+			Armoured_Assault_Bridging_Comp = { x = 1 y = 1 }
+		}
+	}
+}
+
+# <10 factories or dying: 36W special forces + artillery
+# <20 factories: 36W special forces + artillery + support
+# <30 factories: 36W special forces + SP artillery + support
+# <60 factories: 60W special forces + SP artillery + 1 tank + support
+# else: 72W special forces + SP artillery + 1 tank + support
+md_betterai_get_special_forces_role_template = {
+	division_template = {
+		name = "Special Forces Brigade A"
+		priority = 2
+		regiments = {
+			Special_Forces = { x = 0 y = 0 }
+			Special_Forces = { x = 0 y = 1 }
+			Special_Forces = { x = 0 y = 2 }
+			Special_Forces = { x = 0 y = 3 }
+			Special_Forces = { x = 1 y = 0 }
+			Special_Forces = { x = 1 y = 1 }
+			Special_Forces = { x = 1 y = 2 }
+			Special_Forces = { x = 1 y = 3 }
+			Special_Forces = { x = 2 y = 0 }
+			Arty_Bat = { x = 2 y = 1 }
+			Arty_Bat = { x = 2 y = 2 }
+			Arty_Bat = { x = 2 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Special Forces Brigade B"
+		priority = 2
+		regiments = {
+			Special_Forces = { x = 0 y = 0 }
+			Special_Forces = { x = 0 y = 1 }
+			Special_Forces = { x = 0 y = 2 }
+			Special_Forces = { x = 0 y = 3 }
+			Special_Forces = { x = 1 y = 0 }
+			Special_Forces = { x = 1 y = 1 }
+			Special_Forces = { x = 1 y = 2 }
+			Special_Forces = { x = 1 y = 3 }
+			Arty_Bat = { x = 2 y = 0 }
+			Arty_Bat = { x = 2 y = 1 }
+			Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+			AT_Inf_comp = { x = 0 y = 2 }
+		}
+	}
+	division_template = {
+		name = "Special Forces Brigade C"
+		priority = 2
+		regiments = {
+			Special_Forces = { x = 0 y = 0 }
+			Special_Forces = { x = 0 y = 1 }
+			Special_Forces = { x = 0 y = 2 }
+			Special_Forces = { x = 0 y = 3 }
+			Special_Forces = { x = 1 y = 0 }
+			Special_Forces = { x = 1 y = 1 }
+			Special_Forces = { x = 1 y = 2 }
+			Special_Forces = { x = 1 y = 3 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+			SP_Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			L_Engi_Comp = { x = 0 y = 1 }
+			AT_Inf_comp = { x = 0 y = 2 }
+		}
+	}
+	division_template = {
+		name = "Special Forces Division A"
+		priority = 2
+		regiments = {
+			Special_Forces = { x = 0 y = 0 }
+			Special_Forces = { x = 0 y = 1 }
+			Special_Forces = { x = 0 y = 2 }
+			Special_Forces = { x = 0 y = 3 }
+			Special_Forces = { x = 0 y = 4 }
+			Special_Forces = { x = 1 y = 0 }
+			Special_Forces = { x = 1 y = 1 }
+			Special_Forces = { x = 1 y = 2 }
+			Special_Forces = { x = 1 y = 3 }
+			Special_Forces = { x = 1 y = 4 }
+			Special_Forces = { x = 2 y = 0 }
+			Special_Forces = { x = 2 y = 1 }
+			Special_Forces = { x = 2 y = 2 }
+			Special_Forces = { x = 2 y = 3 }
+			SP_Arty_Bat = { x = 3 y = 0 }
+			SP_Arty_Bat = { x = 3 y = 1 }
+			SP_Arty_Bat = { x = 3 y = 2 }
+			armor_Bat = { x = 3 y = 3 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			medical_company = { x = 0 y = 2 }
+			logistics_company = { x = 0 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Special Forces Division B"
+		priority = 2
+		regiments = {
+			Special_Forces = { x = 0 y = 0 }
+			Special_Forces = { x = 0 y = 1 }
+			Special_Forces = { x = 0 y = 2 }
+			Special_Forces = { x = 0 y = 3 }
+			Special_Forces = { x = 1 y = 0 }
+			Special_Forces = { x = 1 y = 1 }
+			Special_Forces = { x = 1 y = 2 }
+			Special_Forces = { x = 1 y = 3 }
+			Special_Forces = { x = 2 y = 0 }
+			Special_Forces = { x = 2 y = 1 }
+			Special_Forces = { x = 2 y = 2 }
+			Special_Forces = { x = 2 y = 3 }
+			Special_Forces = { x = 3 y = 0 }
+			Special_Forces = { x = 3 y = 1 }
+			Special_Forces = { x = 3 y = 2 }
+			Special_Forces = { x = 3 y = 3 }
+			AA_Inf_Bat = { x = 3 y = 4 }
+			SP_Arty_Bat = { x = 4 y = 0 }
+			SP_Arty_Bat = { x = 4 y = 1 }
+			SP_Arty_Bat = { x = 4 y = 2 }
+			SP_Arty_Bat = { x = 4 y = 3 }
+			armor_Bat = { x = 4 y = 4 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			medical_company = { x = 0 y = 2 }
+			logistics_company = { x = 0 y = 3 }
+			Special_naval_assault_team_Comp = { x = 0 y = 4 }
+		}
+	}
+}
+
+# <40 factories or dying: don't build
+# <60 factories: 36W infantry + air assault + support
+# <100 factories: 36W infantry + air assault + 1 tank + support
+# else: 36W armored infantry + air assault + 1 tank + support
+md_betterai_get_air_assault_role_templates = {
+	division_template = {
+		name = "Air Assault Brigade A"
+		priority = 2
+		regiments = {
+			L_Air_assault_Bat = { x = 0 y = 0 }
+			L_Air_assault_Bat = { x = 0 y = 1 }
+			L_Air_assault_Bat = { x = 0 y = 2 }
+			L_Air_assault_Bat = { x = 0 y = 3 }
+			attack_helo_bat = { x = 1 y = 0 }
+			attack_helo_bat = { x = 1 y = 1 }
+			attack_helo_bat = { x = 1 y = 2 }
+			attack_helo_bat = { x = 1 y = 3 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			SP_AA_Battery = { x = 0 y = 2 }
+			SP_Arty_Battery = { x = 0 y = 3 }
+			medical_company = { x = 0 y = 4 }
+		}
+	}
+	division_template = {
+		name = "Air Assault Brigade B"
+		priority = 2
+		regiments = {
+			L_Air_assault_Bat = { x = 0 y = 0 }
+			L_Air_assault_Bat = { x = 0 y = 1 }
+			L_Air_assault_Bat = { x = 0 y = 2 }
+			attack_helo_bat = { x = 1 y = 0 }
+			attack_helo_bat = { x = 1 y = 1 }
+			attack_helo_bat = { x = 1 y = 2 }
+			attack_helo_bat = { x = 1 y = 3 }
+			Arm_Air_assault_Bat = { x = 1 y = 4 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			SP_Arty_Battery = { x = 0 y = 2 }
+			medical_company = { x = 0 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Armored Air Assault Brigade"
+		priority = 2
+		regiments = {
+			Arm_Air_assault_Bat = { x = 0 y = 0 }
+			Arm_Air_assault_Bat = { x = 0 y = 1 }
+			Arm_Air_assault_Bat = { x = 0 y = 2 }
+			Arm_Air_assault_Bat = { x = 0 y = 3 }
+			attack_helo_bat = { x = 1 y = 0 }
+			attack_helo_bat = { x = 1 y = 1 }
+			attack_helo_bat = { x = 1 y = 2 }
+			attack_helo_bat = { x = 1 y = 3 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			Armored_Engi_Comp = { x = 0 y = 1 }
+		}
+	}
+}
+
+# <20 factories or dying: don't build
+# <45 factories: 36W light tank + mbt + armored infantry + SP artillery + support
+# <60 factories: 36W mbt + armored infantry + SP artillery + support
+# <100 factories: 60W mbt + armored infantry + SP artillery + support
+# else: 72W mbt + armored infantry + SP artillery + support
+md_betterai_get_armor_role_templates = {
+	division_template = {
+		name = "Tank Brigade A"
+		priority = 2
+		regiments = {
+			L_arm_Bat = { x = 0 y = 0 }
+			L_arm_Bat = { x = 0 y = 1 }
+			L_arm_Bat = { x = 0 y = 2 }
+			armor_Bat = { x = 1 y = 0 }
+			armor_Bat = { x = 1 y = 1 }
+			armor_Bat = { x = 1 y = 2 }
+			Arm_Inf_Bat = { x = 2 y = 0 }
+			Arm_Inf_Bat = { x = 2 y = 1 }
+			SP_Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Engi_Comp = { x = 0 y = 0 }
+		}
+	}
+	division_template = {
+		name = "Tank Brigade B"
+		priority = 2
+		regiments = {
+			armor_Bat = { x = 0 y = 0 }
+			armor_Bat = { x = 0 y = 1 }
+			armor_Bat = { x = 0 y = 2 }
+			armor_Bat = { x = 1 y = 0 }
+			armor_Bat = { x = 1 y = 1 }
+			Arm_Inf_Bat = { x = 2 y = 0 }
+			Arm_Inf_Bat = { x = 2 y = 1 }
+			SP_Arty_Bat = { x = 2 y = 2 }
+		}
+		support = {
+			L_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			Arty_Battery = { x = 0 y = 3 }
+		}
+	}
+	division_template = {
+		name = "Tank Division A"
+		priority = 2
+		regiments = {
+			armor_Bat = { x = 0 y = 0 }
+			armor_Bat = { x = 0 y = 1 }
+			armor_Bat = { x = 0 y = 2 }
+			armor_Bat = { x = 0 y = 3 }
+			armor_Bat = { x = 0 y = 4 }
+			armor_Bat = { x = 1 y = 0 }
+			armor_Bat = { x = 1 y = 1 }
+			Arm_Inf_Bat = { x = 1 y = 2 }
+			Arm_Inf_Bat = { x = 1 y = 3 }
+			Arm_Inf_Bat = { x = 1 y = 4 }
+			SP_Arty_Bat = { x = 2 y = 0 }
+			SP_Arty_Bat = { x = 2 y = 1 }
+			SP_Arty_Bat = { x = 2 y = 2 }
+			SP_Arty_Bat = { x = 2 y = 3 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			Armoured_Assault_Bridging_Comp = { x = 0 y = 3 }
+			medical_company = { x = 0 y = 4 }
+		}
+	}
+	division_template = {
+		name = "Tank Division B"
+		priority = 2
+		regiments = {
+			armor_Bat = { x = 0 y = 0 }
+			armor_Bat = { x = 0 y = 1 }
+			armor_Bat = { x = 0 y = 2 }
+			armor_Bat = { x = 0 y = 3 }
+			armor_Bat = { x = 0 y = 4 }
+			armor_Bat = { x = 1 y = 0 }
+			armor_Bat = { x = 1 y = 1 }
+			armor_Bat = { x = 1 y = 2 }
+			armor_Bat = { x = 1 y = 3 }
+			armor_Bat = { x = 1 y = 4 }
+			Arm_Inf_Bat = { x = 2 y = 0 }
+			Arm_Inf_Bat = { x = 2 y = 1 }
+			Arm_Inf_Bat = { x = 2 y = 2 }
+			SP_Arty_Bat = { x = 3 y = 0 }
+			SP_Arty_Bat = { x = 3 y = 1 }
+			SP_Arty_Bat = { x = 3 y = 2 }
+			SP_Arty_Bat = { x = 3 y = 3 }
+		}
+		support = {
+			Arm_Recce_Comp = { x = 0 y = 0 }
+			H_Engi_Comp = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			Armoured_Assault_Bridging_Comp = { x = 0 y = 3 }
+			medical_company = { x = 0 y = 4 }
+		}
+	}
 }

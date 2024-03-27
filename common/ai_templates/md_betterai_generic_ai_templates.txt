@@ -1,0 +1,917 @@
+generic_garrison_templates = {
+	roles = { garrison }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	militia_garrison_18w = {
+		enable = { has_country_flag = { flag = md_betterai_garrison_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 18
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Militia_Bat = 6
+			}
+		}
+		allowed_types = { Militia_Bat }
+	}
+	militia_garrison_36w = {
+		enable = { has_country_flag = { flag = md_betterai_garrison_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Militia_Bat = 12
+			}
+		}
+		allowed_types = { Militia_Bat }
+	}
+	militia_garrison_36w_A = {
+		enable = { has_country_flag = { flag = md_betterai_garrison_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Militia_Bat = 9
+				Arty_Bat = 3
+			}
+		}
+		allowed_types = { Militia_Bat Arty_Bat }
+	}
+	militia_garrison_36w_B = {
+		enable = { has_country_flag = { flag = md_betterai_garrison_role_template_type value = 4 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Militia_Bat = 8
+				Arty_Bat = 3
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+				combat_service_support_company = 1
+			}
+		}
+		allowed_types = { Militia_Bat Arty_Bat L_Recce_Comp L_Engi_Comp combat_service_support_company }
+	}
+	infantry_garrison_36w = {
+		enable = { has_country_flag = { flag = md_betterai_garrison_role_template_type value = 5 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Inf_Bat = 8
+				Arty_Bat = 3
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+				combat_service_support_company = 1
+			}
+		}
+		allowed_types = { L_Inf_Bat Arty_Bat L_Recce_Comp L_Engi_Comp combat_service_support_company }
+	}
+}
+
+generic_infantry_templates = {
+	roles = { infantry }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	infantry_battalion_18w = {
+		enable = { has_country_flag = { flag = md_betterai_infantry_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 18
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Inf_Bat = 6
+			}
+		}
+		allowed_types = { L_Inf_Bat }
+	}
+	infantry_brigade_36W_A = {
+		enable = { has_country_flag = { flag = md_betterai_infantry_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Inf_Bat = 12
+			}
+		}
+		allowed_types = { L_Inf_Bat }
+	}
+	infantry_brigade_36W_B = {
+		enable = { has_country_flag = { flag = md_betterai_infantry_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Inf_Bat = 8
+				Arty_Bat = 3
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+				combat_service_support_company = 1
+			}
+		}
+		allowed_types = { L_Inf_Bat Arty_Bat L_Recce_Comp L_Engi_Comp combat_service_support_company }
+	}
+	infantry_brigade_36W_C = {
+		enable = { has_country_flag = { flag = md_betterai_infantry_role_template_type value = 4 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Inf_Bat = 8
+				SP_Arty_Battery = 3
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+			}
+		}
+		allowed_types = { L_Inf_Bat Arty_Bat L_Recce_Comp L_Engi_Comp }
+	}
+}
+
+generic_motorized_templates = {
+	roles = { motorized }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	motorized_battalion_18w = {
+		enable = { has_country_flag = { flag = md_betterai_motorized_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 18
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Mot_Inf_Bat = 4
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+			}
+		}
+		allowed_types = { Mot_Inf_Bat L_Recce_Comp L_Engi_Comp }
+	}
+	motorized_brigade_36w_A = {
+		enable = { has_country_flag = { flag = md_betterai_motorized_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Mot_Inf_Bat = 8
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+				combat_service_support_company = 1
+				Arty_Battery = 1
+			}
+		}
+		allowed_types = { Mot_Inf_Bat L_Recce_Comp L_Engi_Comp combat_service_support_company Arty_Battery }
+	}
+	motorized_brigade_36w_B = {
+		enable = { has_country_flag = { flag = md_betterai_motorized_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Mot_Inf_Bat = 7
+				SP_Arty_Bat = 2
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+			}
+		}
+		allowed_types = { Mot_Inf_Bat SP_Arty_Bat L_Recce_Comp L_Engi_Comp }
+	}
+}
+
+generic_mechanized_templates = {
+	roles = { mechanized }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	mechanized_brigade_36w_A = {
+		enable = { has_country_flag = { flag = md_betterai_mechanized_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Mech_Inf_Bat = 7
+				SP_Arty_Bat = 2
+			}
+			support = {
+				H_Engi_Comp = 1
+			}
+		}
+		allowed_types = { Mech_Inf_Bat SP_Arty_Bat H_Engi_Comp }
+	}
+	mechanized_brigade_36w_B = {
+		enable = { has_country_flag = { flag = md_betterai_mechanized_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Mech_Inf_Bat = 6
+				SP_Arty_Bat = 2
+			}
+			support = {
+				Mech_Recce_Comp = 1
+				H_Engi_Comp = 1
+				logistics_company = 1
+				medical_company = 1
+			}
+		}
+		allowed_types = { Mech_Inf_Bat SP_Arty_Bat Mech_Recce_Comp H_Engi_Comp logistics_company medical_company }
+	}
+	mechanized_brigade_36w_C = {
+		enable = { has_country_flag = { flag = md_betterai_mechanized_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Mech_Inf_Bat = 5
+				armor_Bat = 1
+				SP_Arty_Bat = 2
+			}
+			support = {
+				Mech_Recce_Comp = 1
+				H_Engi_Comp = 1
+				logistics_company = 1
+				medical_company = 1
+			}
+		}
+		allowed_types = { Mech_Inf_Bat armor_Bat SP_Arty_Bat Mech_Recce_Comp H_Engi_Comp logistics_company medical_company }
+	}
+}
+
+generic_armored_infantry_templates = {
+	roles = { armored_infantry }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	armored_infantry_brigade_36w_A = {
+		enable = { has_country_flag = { flag = md_betterai_armored_infantry_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Arm_Inf_Bat = 7
+				SP_Arty_Bat = 2
+			}
+			support = {
+				H_Engi_Comp = 1
+			}
+		}
+		allowed_types = { Arm_Inf_Bat SP_Arty_Bat H_Engi_Comp }
+	}
+	armored_infantry_brigade_36w_B = {
+		enable = { has_country_flag = { flag = md_betterai_armored_infantry_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Arm_Inf_Bat = 6
+				SP_Arty_Bat = 2
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				H_Engi_Comp = 1
+				logistics_company = 1
+				medical_company = 1
+			}
+		}
+		allowed_types = { Arm_Inf_Bat SP_Arty_Bat Arm_Recce_Comp H_Engi_Comp logistics_company medical_company }
+	}
+	armored_infantry_brigade_36w_C = {
+		enable = { has_country_flag = { flag = md_betterai_armored_infantry_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Arm_Inf_Bat = 5
+				armor_Bat = 1
+				SP_Arty_Bat = 2
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				H_Engi_Comp = 1
+				logistics_company = 1
+				medical_company = 1
+			}
+		}
+		allowed_types = { Arm_Inf_Bat armor_Bat SP_Arty_Bat Arm_Recce_Comp H_Engi_Comp logistics_company medical_company }
+	}
+}
+
+generic_marines_templates = {
+	roles = { marines }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	marines_brigade_36w_A = {
+		enable = { has_country_flag = { flag = md_betterai_marines_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Marine_Bat = 8
+				Arty_Bat = 3
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+				AT_Inf_comp = 1
+			}
+		}
+		allowed_types = { L_Marine_Bat Arty_Bat L_Recce_Comp L_Engi_Comp AT_Inf_comp }
+	}
+	marines_brigade_36w_B = {
+		enable = { has_country_flag = { flag = md_betterai_marines_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Marine_Bat = 8
+				SP_Arty_Bat = 3
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+				AT_Inf_comp = 1
+			}
+		}
+		allowed_types = { L_Marine_Bat SP_Arty_Bat L_Recce_Comp L_Engi_Comp AT_Inf_comp }
+	}
+	marines_division_60w = {
+		enable = { has_country_flag = { flag = md_betterai_marines_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Marine_Bat = 14
+				SP_Arty_Bat = 3
+				armor_Bat = 1
+			}
+			support = {
+				L_Recce_Comp = 1
+				H_Engi_Comp = 1
+				medical_company = 1
+				logistics_company = 1
+			}
+		}
+		allowed_types = { L_Marine_Bat SP_Arty_Bat armor_Bat L_Recce_Comp H_Engi_Comp medical_company logistics_company }
+	}
+	marines_division_72w = {
+		enable = { has_country_flag = { flag = md_betterai_marines_role_template_type value = 4 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 72
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Marine_Bat = 16
+				SP_Arty_Bat = 4
+				armor_Bat = 1
+			}
+			support = {
+				L_Recce_Comp = 1
+				H_Engi_Comp = 1
+				medical_company = 1
+				logistics_company = 1
+				Special_naval_assault_team_Comp = 1
+			}
+		}
+		allowed_types = { L_Marine_Bat SP_Arty_Bat armor_Bat L_Recce_Comp H_Engi_Comp medical_company logistics_company Special_naval_assault_team_Comp }
+	}
+}
+
+generic_mechanized_marines_templates = {
+	roles = { mechanized_marines }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	mechanized_marines_brigade_36w = {
+		enable = { has_country_flag = { flag = md_betterai_mechanized_marines_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Arm_Marine_Bat = 6
+				SP_Arty_Bat = 2
+			}
+			support = {
+				L_Engi_Comp = 1
+				Special_naval_assault_team_Comp = 1
+			}
+		}
+		allowed_types = { Arm_Marine_Bat SP_Arty_Bat L_Engi_Comp Special_naval_assault_team_Comp }
+	}
+	mechanized_marines_division_60w = {
+		enable = { has_country_flag = { flag = md_betterai_mechanized_marines_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Arm_Marine_Bat = 11
+				SP_Arty_Bat = 3
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				H_Engi_Comp = 1
+				logistics_company = 1
+				Armoured_Assault_Bridging_Comp = 1
+			}
+		}
+		allowed_types = { Arm_Marine_Bat SP_Arty_Bat Arm_Recce_Comp H_Engi_Comp logistics_company Armoured_Assault_Bridging_Comp }
+	}
+	mechanized_marines_division_72w = {
+		enable = { has_country_flag = { flag = md_betterai_mechanized_marines_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 72
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Arm_Marine_Bat = 12
+				SP_Arty_Bat = 2
+				armor_Bat = 2
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				H_Engi_Comp = 1
+				Armored_Engi_Comp = 1
+				helicopter_logistics_company = 1
+				medical_company = 1
+				Armoured_Assault_Bridging_Comp = 1
+			}
+		}
+		allowed_types = { Arm_Marine_Bat SP_Arty_Bat armor_Bat Arm_Recce_Comp H_Engi_Comp helicopter_logistics_company medical_company Armoured_Assault_Bridging_Comp }
+	}
+}
+
+generic_special_forces_templates = {
+	roles = { special_forces }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	special_forces_brigade_36w_A = {
+		enable = { has_country_flag = { flag = md_betterai_special_forces_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Special_Forces = 8
+				Arty_Bat = 3
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+				AT_Inf_comp = 1
+			}
+		}
+		allowed_types = { Special_Forces Arty_Bat L_Recce_Comp L_Engi_Comp AT_Inf_comp }
+	}
+	special_forces_brigade_36w_B = {
+		enable = { has_country_flag = { flag = md_betterai_special_forces_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Special_Forces = 8
+				SP_Arty_Bat = 3
+			}
+			support = {
+				L_Recce_Comp = 1
+				L_Engi_Comp = 1
+				AT_Inf_comp = 1
+			}
+		}
+		allowed_types = { Special_Forces SP_Arty_Bat L_Recce_Comp L_Engi_Comp AT_Inf_comp }
+	}
+	special_forces_division_60w = {
+		enable = { has_country_flag = { flag = md_betterai_special_forces_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Special_Forces = 14
+				SP_Arty_Bat = 3
+				armor_Bat = 1
+			}
+			support = {
+				L_Recce_Comp = 1
+				H_Engi_Comp = 1
+				medical_company = 1
+				logistics_company = 1
+			}
+		}
+		allowed_types = { Special_Forces SP_Arty_Bat armor_Bat L_Recce_Comp H_Engi_Comp medical_company logistics_company }
+	}
+	special_forces_division_72w = {
+		enable = { has_country_flag = { flag = md_betterai_special_forces_role_template_type value = 4 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 72
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Special_Forces = 16
+				SP_Arty_Bat = 4
+				armor_Bat = 1
+			}
+			support = {
+				L_Recce_Comp = 1
+				H_Engi_Comp = 1
+				medical_company = 1
+				logistics_company = 1
+				Special_naval_assault_team_Comp = 1
+			}
+		}
+		allowed_types = { Special_Forces SP_Arty_Bat armor_Bat L_Recce_Comp H_Engi_Comp medical_company logistics_company Special_naval_assault_team_Comp }
+	}
+}
+
+generic_air_assault_templates = {
+	roles = { air_assault }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	air_assault_brigade_36w_A = {
+		enable = { has_country_flag = { flag = md_betterai_air_assault_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Air_assault_Bat = 4
+				attack_helo_bat = 4
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				H_Engi_Comp = 1
+				SP_AA_Battery = 1
+				SP_Arty_Battery = 1
+				medical_company = 1
+			}
+		}
+		allowed_types = { L_Air_assault_Bat attack_helo_bat Arm_Recce_Comp H_Engi_Comp SP_AA_Battery SP_Arty_Battery medical_company }
+	}
+	air_assault_brigade_36w_B = {
+		enable = { has_country_flag = { flag = md_betterai_air_assault_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_Air_assault_Bat = 3
+				attack_helo_bat = 4
+				Arm_Air_assault_Bat = 1
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				H_Engi_Comp = 1
+				SP_Arty_Battery = 1
+				medical_company = 1
+			}
+		}
+		allowed_types = { L_Air_assault_Bat attack_helo_bat Arm_Air_assault_Bat Arm_Recce_Comp H_Engi_Comp SP_Arty_Battery medical_company }
+	}
+	air_assault_brigade_36w_C = {
+		enable = { has_country_flag = { flag = md_betterai_air_assault_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				Arm_Air_assault_Bat = 4
+				attack_helo_bat = 4
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				Armored_Engi_Comp = 1
+			}
+		}
+		allowed_types = { Arm_Air_assault_Bat attack_helo_bat Arm_Recce_Comp Armored_Engi_Comp }
+	}
+}
+
+generic_armor_templates = {
+	roles = { armor }
+	upgrade_prio = { base = 1 }
+	match_to_count = 0.5
+	tank_brigade_36w_A = {
+		enable = { has_country_flag = { flag = md_betterai_armor_role_template_type value = 1 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				L_arm_Bat = 3
+				armor_Bat = 3
+				Arm_Inf_Bat = 2
+				SP_Arty_Bat = 1
+			}
+			support = {
+				L_Engi_Comp = 1
+			}
+		}
+		allowed_types = { L_arm_Bat armor_Bat Arm_Inf_Bat SP_Arty_Bat L_Engi_Comp }
+	}
+	tank_brigade_36w_B = {
+		enable = { has_country_flag = { flag = md_betterai_armor_role_template_type value = 2 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 36
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				armor_Bat = 5
+				Arm_Inf_Bat = 2
+				SP_Arty_Bat = 1
+			}
+			support = {
+				L_Recce_Comp = 1
+				H_Engi_Comp = 1
+				logistics_company = 1
+				Arty_Battery = 1
+			}
+		}
+		allowed_types = { armor_Bat Arm_Inf_Bat SP_Arty_Bat L_Recce_Comp H_Engi_Comp logistics_company Arty_Battery }
+	}
+	tank_division_60w = {
+		enable = { has_country_flag = { flag = md_betterai_armor_role_template_type value = 3 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				armor_Bat = 7
+				Arm_Inf_Bat = 3
+				SP_Arty_Bat = 4
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				H_Engi_Comp = 1
+				logistics_company = 1
+				Armoured_Assault_Bridging_Comp = 1
+				medical_company = 1
+			}
+		}
+		allowed_types = { armor_Bat Arm_Inf_Bat SP_Arty_Bat Arm_Recce_Comp H_Engi_Comp logistics_company Armoured_Assault_Bridging_Comp medical_company }
+	}
+	tank_division_72w = {
+		enable = { has_country_flag = { flag = md_betterai_armor_role_template_type value = 4 } }
+		production_prio = { base = 10 }
+		upgrade_prio = { base = 10 }
+		can_upgrade_in_field = { always = yes }
+		target_width = 72
+		width_weight = 1
+		column_swap_factor = 1
+		reinforce_prio = 0
+		target_template = {
+			weight = 100
+			match_value = 100
+			regiments = {
+				armor_Bat = 10
+				Arm_Inf_Bat = 3
+				SP_Arty_Bat = 4
+			}
+			support = {
+				Arm_Recce_Comp = 1
+				H_Engi_Comp = 1
+				logistics_company = 1
+				Armoured_Assault_Bridging_Comp = 1
+				medical_company = 1
+			}
+		}
+		allowed_types = { armor_Bat Arm_Inf_Bat SP_Arty_Bat Arm_Recce_Comp H_Engi_Comp logistics_company Armoured_Assault_Bridging_Comp medical_company }
+	}
+}
