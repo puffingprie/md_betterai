@@ -288,7 +288,7 @@ md_betterai_get_mechanized_role_templates = {
 			SP_Arty_Bat = { x = 2 y = 1 }
 		}
 		support = {
-			Mech_Recce_Comp = { x = 0 y = 0 }
+			Mot_Recce_Comp = { x = 0 y = 0 }
 			H_Engi_Comp = { x = 0 y = 1 }
 			logistics_company = { x = 0 y = 2 }
 			medical_company = { x = 0 y = 3 }
@@ -308,7 +308,7 @@ md_betterai_get_mechanized_role_templates = {
 			SP_Arty_Bat = { x = 2 y = 1 }
 		}
 		support = {
-			Mech_Recce_Comp = { x = 0 y = 0 }
+			Mot_Recce_Comp = { x = 0 y = 0 }
 			H_Engi_Comp = { x = 0 y = 1 }
 			logistics_company = { x = 0 y = 2 }
 			medical_company = { x = 0 y = 3 }
